@@ -1,0 +1,46 @@
+:root {
+  --primary: #FF900E;
+  --bg: #FFF4E7;
+  --dark: #131313;
+  --dark-50: #424242;
+  --dark-30: #727272;
+  --white: #ffffff;
+
+  /* Font-size */
+  --title: 2.6rem;
+  --banner-title: 4rem;
+
+  /* responsive */
+  @media screen and (min-width: 576px) {
+    /* Font-size */
+    --title: 2rem;
+    --banner-title: 3rem;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* Common Style */
+body {
+  font-family: "Work Sans", serif;
+}
+p {
+  font-size: 1rem;
+}
+.btn-primary {
+  color: var(--white);
+  background-color: var(--primary);
+  padding: 16px 36px;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+.section-title {
+  color: var(--dark);
+  font-size: var(--title);
+  font-weight: 700;
+}
