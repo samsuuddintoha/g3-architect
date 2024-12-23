@@ -5,17 +5,6 @@
   --dark-50: #424242;
   --dark-30: #727272;
   --white: #ffffff;
-
-  /* Font-size */
-  --title: 2.6rem;
-  --banner-title: 4rem;
-
-  /* responsive */
-  @media screen and (min-width: 576px) {
-    /* Font-size */
-    --title: 2rem;
-    --banner-title: 3rem;
-  }
 }
 * {
   margin: 0;
@@ -29,8 +18,15 @@ html {
 body {
   font-family: "Work Sans", serif;
 }
+main {
+  margin: 0 240px;
+}
+
 p {
   font-size: 1rem;
+}
+img {
+  max-width: 100%;
 }
 .btn-primary {
   color: var(--white);
@@ -38,9 +34,210 @@ p {
   padding: 16px 36px;
   font-size: 1.25rem;
   font-weight: 500;
+  border: 0;
+  border-radius: 10px;
 }
 .section-title {
   color: var(--dark);
-  font-size: var(--title);
+  font-size: 2.82rem;
   font-weight: 700;
+}
+.section-description {
+  color: var(--dark-30);
+  font-size: 1rem;
+}
+section {
+  margin: 90px auto;
+}
+.column-2 {
+  width: 50%;
+}
+
+/* Nav Style */
+header {
+  background-color: var(--bg);
+}
+nav {
+  padding: 20px 230px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .logo {
+  font-size: 2.8rem;
+}
+nav .menu ul {
+  display: flex;
+  list-style: none;
+  font-size: 1.05rem;
+}
+nav .menu ul li a {
+  text-decoration: none;
+  padding: 10px 20px;
+  color: var(--dark);
+}
+
+/* Banner Section */
+.banner {
+  margin: 0 230px;
+  text-align: center;
+}
+.banner-content {
+  max-width: 670px;
+  margin: 0 auto;
+}
+.banner-content .banner-title {
+  font-size: 4rem;
+  font-weight: 600;
+  color: var(--dark);
+  margin-top: 80px;
+}
+.banner-content .banner-description {
+  color: var(--dark-30);
+  margin: 20px 0;
+}
+.banner-content .btn-primary {
+  margin-bottom: 40px;
+}
+.banner img {
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+/* Quick Links Section */
+.quick-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+.quick-links .images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.quick-links .content .section-title .quick {
+  color: var(--dark-30);
+  font-weight: 400;
+}
+.quick-links .content .section-title .features {
+  color: var(--primary);
+}
+.quick-links .content .section-description {
+  margin: 20px 0;
+}
+
+/* Features Section */
+.feature {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+.feature .content .section-title {
+  padding-left: 30px;
+  border-left: 5px solid var(--primary);
+}
+.feature .content .section-description {
+  margin: 30px 0;
+}
+.feature .content .card {
+  box-shadow: 0 4px 30px 0 rgba(0, 0, 0, .05);
+  margin: 20px 0;
+  padding: 30px 20px;
+  border-radius: 10px;
+}
+.feature .content .card .title {
+  font-size: 1.2rem;
+  color: var(--dark-50);
+  margin-bottom: 10px;
+}
+.feature .content .card .description {
+  color: var(--dark-30);
+}
+.feature .image .img {
+  padding-left: 100px;
+}
+.feature .image .experience {
+  padding: 40px;
+  background-color: var(--primary);
+  max-width: 340px;
+  text-align: center;
+  border-radius: 10px;
+  position: relative;
+  bottom: 80px;
+}
+.feature .image .experience .status {
+  color: var(--white);
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+.feature .image .experience p {
+  color: var(--white);
+  font-size: 1.5rem;
+}
+
+/* Responsive layout */
+@media screen and (max-width: 576px) {
+  main {
+    margin: 0 10px;
+  }
+  .section-title {
+    font-size: 1.8rem;
+  }
+  nav,
+  .quick-links,
+  .feature
+  {
+    flex-direction: column;
+  }
+
+  .quick-links .images {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .column-2 {
+    width: 100%;
+  }
+
+  nav .logo {
+    font-size: 2rem;
+  }
+
+  nav
+  {
+    padding: 10px;
+  }
+
+  .banner {
+    margin: 0 10px;
+  }
+
+  .banner-content .banner-title {
+    font-size: 3rem;
+    margin-top: 40px;
+  }
+}
+
+@media screen and (min-width: 570px) and (max-width: 992px) {
+  main {
+    margin: 0 10px;
+  }
+  .section-title {
+    font-size: 2rem;
+  }
+  .column-2 {
+    width: 100%;
+  }
+  nav {
+    padding: 10px 20px;
+  }
+
+  nav .logo {
+    font-size: 2rem;
+  }
+
+  .banner {
+    margin: 0 20px;
+  }
 }
