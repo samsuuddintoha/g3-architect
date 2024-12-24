@@ -177,6 +177,64 @@ nav .menu ul li a {
   font-size: 1.5rem;
 }
 
+/* Facts Style */
+.facts .section-description {
+  max-width: 600px;
+  margin-top: 10px;
+}
+.facts .card-container {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 30px;
+  margin-top: 30px;
+}
+.facts .card {
+  text-align: center;
+  padding: 40px;
+  border: 1px solid var(--primary);
+  border-radius: 10px;
+}
+.facts .card .section-title {
+  color: var(--dark-50);
+  margin: 5px 0;
+}
+.facts .card .title {
+  font-size: 1.1rem;
+  color: var(--dark-30);
+}
+
+/* Sponsors Style */
+.sponsor {
+  text-align: center;
+}
+.sponsor .section-description {
+  max-width: 600px;
+  margin: 10px auto;
+}
+.sponsor .card-container {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+}
+.sponsor .card img {
+  filter: grayscale(1);
+  cursor: pointer;
+}
+.sponsor .card img:hover {
+  filter: grayscale(0);
+}
+
+/* Footer Style */
+footer .copyright {
+  color: var(--dark);
+  background-color: var(--bg);
+  margin: 0 130px 30px 130px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 30px;
+}
+
 /* Responsive layout */
 @media screen and (max-width: 576px) {
   main {
@@ -191,36 +249,44 @@ nav .menu ul li a {
   {
     flex-direction: column;
   }
-
-  .quick-links .images {
-    grid-template-columns: repeat(1, 1fr);
+  .quick-links .images,
+  .facts .card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
-
+  .sponsor .card-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
   .column-2 {
     width: 100%;
   }
-
   nav .logo {
     font-size: 2rem;
   }
-
+  .feature .image .experience {
+    max-width: 250px;
+  }
+  .feature .image .experience .status {
+    font-size: 2.2rem;
+  }
   nav
   {
     padding: 10px;
   }
-
   .banner {
     margin: 0 10px;
   }
-
   .banner-content .banner-title {
     font-size: 3rem;
     margin-top: 40px;
   }
+  footer .copyright {
+    margin: 10px;
+  }
 }
 
 @media screen and (min-width: 570px) and (max-width: 992px) {
-  main {
+  main{
     margin: 0 10px;
   }
   .section-title {
@@ -232,12 +298,19 @@ nav .menu ul li a {
   nav {
     padding: 10px 20px;
   }
-
   nav .logo {
     font-size: 2rem;
   }
-
   .banner {
     margin: 0 20px;
+  }
+  .feature .image .experience {
+    max-width: 250px;
+  }
+  .feature .image .experience .status {
+    font-size: 2.2rem;
+  }
+  footer .copyright {
+    margin: 10px;
   }
 }
